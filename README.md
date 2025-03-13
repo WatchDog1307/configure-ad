@@ -60,4 +60,15 @@ In order to change the DNS server for client-1 we need to go to our virtual mach
 <p>
 In order to make DC-1 into a domain controller, we need to go to server manager and click on add roles and services. From here we caan click next until we reach the page shown in the first image (server roles) and select "Active Directory Domain Services". We can then click next until given to the option to install. After installation we can click on the flag show in image two ( upper right of page) and configure our domain name. Click Deployment Configuration -> Add new forest -> enter root domain name.You can then click next until installation. After this is completed your VM will restart prompting you to enter your information again. This time we will put our domian name to specify where we want to log in, in this case we would log in as "mydomain\Kev" to enter in that domain as that user.
 </p>
+<p>
+  <img width="800" alt="image" src="https://github.com/user-attachments/assets/e9d2f78f-e97e-48b2-8a8c-51adcab07966" />
+<img width="698" alt="image" src="https://github.com/user-attachments/assets/b4df4a58-5ef7-4217-b0d1-aa6703b045a2" />
+<img width="820" alt="image" src="https://github.com/user-attachments/assets/5609d043-e2a3-4b56-8b57-199483032a11" />
+</p>
+<P>
+  We now want to create a two folders, one for employees and another for admins, and create a domian admin as well. For the folders we can click the search bar and enter Active Directory Users and Computers and click on it -> right click on "mydomain.com" -> click new -> Organizational Unit -> enter file names ( in this case we create two, one for _EMPLOYEES and _ADMINS). Now in order to create a domain admin we can right click the _ADMINS folder -> New -> User. Fill out the information, in this case I created a domian admin named "Jane_admin", you will be clicked next then prompted for a password. Once completed, in order to make this user a domain admin we need to right click on the user ( in this case Jane Doe) -> properties -> Member of -> add -> enter "Domain Admins" -> check names -> ok -> apply then ok. This will add Jane doe as part of the Domain Admins group officially.
+</P>
+<p>
+  
+</p>
 <br />
