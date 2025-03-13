@@ -26,7 +26,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 - Step1: Create VM for Domain controller(DC) and client-1. 
 - Step 2: Configure DC private IP address to static, set client-1 DNS setting to DC private IP address
-- Step 3: Install Active Directory, create domain and configure for admin and users.
+- Step 3: Install Active Directory, create Domain, configure for Domain admin and users.
 - Step 4: Setup remote desktop for non-admin users on client-1 and attempt connections.
 <h2>Lab Visual Diagram</h2>
 <P>
@@ -69,6 +69,10 @@ In order to make DC-1 into a domain controller, we need to go to server manager 
   We now want to create a two folders, one for employees and another for admins, and create a domian admin as well. For the folders we can click the search bar and enter Active Directory Users and Computers and click on it -> right click on "mydomain.com" -> click new -> Organizational Unit -> enter file names ( in this case we create two, one for _EMPLOYEES and _ADMINS). Now in order to create a domain admin we can right click the _ADMINS folder -> New -> User. Fill out the information, in this case I created a domian admin named "Jane_admin", you will be clicked next then prompted for a password. Once completed, in order to make this user a domain admin we need to right click on the user ( in this case Jane Doe) -> properties -> Member of -> add -> enter "Domain Admins" -> check names -> ok -> apply then ok. This will add Jane doe as part of the Domain Admins group officially.
 </P>
 <p>
-  
+  <img width="937" alt="image" src="https://github.com/user-attachments/assets/05ca39e0-ec39-4a39-b8ee-85e907cc4ff1" />
+<img width="595" alt="image" src="https://github.com/user-attachments/assets/01447dc2-4bec-4521-9c66-b291ecb1b7f0" />
+</p>
+<p>
+  Next thing we want to do is add Client-1 to our domian to do so we log into it with our first user ( in my case it was "labuser"), go into settings -> Rename this PC (advanced) -> change -> click on Domain, enter domain ( in this case: mydomain.com) -> ok. This will add Client-1 to the mydomain.com but to make sure we will go back to the Domain controller. From here we can search for Active Directory Users and Computers -> click on Computers folder -> Client-1 should be present.
 </p>
 <br />
