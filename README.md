@@ -75,4 +75,17 @@ In order to make DC-1 into a domain controller, we need to go to server manager 
 <p>
   Next thing we want to do is add Client-1 to our domian to do so we log into it with our first user ( in my case it was "labuser"), go into settings -> Rename this PC (advanced) -> change -> click on Domain, enter domain ( in this case: mydomain.com) -> ok. This will add Client-1 to the mydomain.com but to make sure we will go back to the Domain controller. From here we can search for Active Directory Users and Computers -> click on Computers folder -> Client-1 should be present.
 </p>
+<p>
+  <img width="907" alt="image" src="https://github.com/user-attachments/assets/55578047-c3c0-424d-b3e1-8d58da78d882" />
+</p>
+<p>
+  In this part we want to give remote access to Client-1 to all users in the domain. To do so, we must log in as the admin (in this case Jane_admin) into Client-1. From here we can go to settings -> setting up remote desktop (right side of page) -> Select users that can remotely access this PC -> add "Domain users" -> ok. Now we can go create some users that will be able to access Client-1 remotely.
+</p>
+<p>
+  <img width="829" alt="image" src="https://github.com/user-attachments/assets/35d5e7c0-ed11-4d8b-a89a-40019cf1f756" />
+<img width="932" alt="image" src="https://github.com/user-attachments/assets/c81d8939-1b2c-470d-a853-26a708bc4135" />
+</p>
+<p>
+  To create users we can use a script as show in this example. To do so we go to DC-1 as admin -> open Powershell ISE -> File -> New -> paste script into command line -> run script. If executed correctly the command line should generate users but to cofnirm we can head over to Active Directory Users and Computers -> _EMPLOYEES foler. There should be users in the folder. Note: In this script given, it generated 100 accounts and the password for all of them is "Password1" and they would be imported into the file _EMPLOYEES which is important to have the correct name. Lastly we want to see if we are able to login in into Client-1 with one of these users, to do so we just get the user name login in via Remote Desktop. A example would be : "mydomain.com\big.sapir" as the username and "Password1" for the password.
+</p>
 <br />
