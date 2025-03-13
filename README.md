@@ -52,9 +52,12 @@ In order to change the DNS server for client-1 we need to go to our virtual mach
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="728" alt="image" src="https://github.com/user-attachments/assets/51957803-4e27-48a2-9545-db88f5379e0a" />
+<img width="926" alt="image" src="https://github.com/user-attachments/assets/19c8d62b-5562-478f-b790-a986699caf63" />
+<img width="299" alt="image" src="https://github.com/user-attachments/assets/9b968918-69ed-45fa-97a3-02e8927a65d2" />
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+In order to make DC-1 into a domain controller, we need to go to server manager and click on add roles and services. From here we caan click next until we reach the page shown in the first image (server roles) and select "Active Directory Domain Services". We can then click next until given to the option to install. After installation we can click on the flag show in image two ( upper right of page) and configure our domain name. Click Deployment Configuration -> Add new forest -> enter root domain name.You can then click next until installation. After this is completed your VM will restart prompting you to enter your information again. This time we will put our domian name to specify where we want to log in, in this case we would log in as "mydomain\Kev" to enter in that domain as that user.
 </p>
 <br />
